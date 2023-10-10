@@ -12,10 +12,11 @@ const ShoppingCart = () => {
   };
 
   const calculateTotal = () => {
-    return cartItems.reduce(
+    const totalPrice = cartItems.reduce(
       (total, bike) => total + bike.price * bike.quantity,
       0
     );
+    return totalPrice.toFixed(2);
   };
 
   return (
